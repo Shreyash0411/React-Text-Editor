@@ -72,16 +72,16 @@ export default function TextForm(props) {
                 <textarea className="form-control" id="myBox" value={text} onChange={handleOnChange}  rows="8" style={{backgroundColor : props.mode==="light"?"white":"#2D4356", color : props.mode === "light"?"black":"white"}}></textarea>
             </div>
 
-                <button className="btn btn-primary mx-2 my-2" onClick={handleUCClick}>Convert To Uppercase</button>
-                <button className="btn btn-primary mx-2 my-2" onClick={handleLCClick}>Convert To Lowercase</button>
-                <button className="btn btn-primary mx-2 my-2" onClick={handleCapitalized}>Convert To Capitalized</button>
-                <button className="btn btn-primary mx-2 my-2" onClick={handleCopy}>Copy All Text</button>
-                <button className="btn btn-primary mx-2 my-2" onClick={handleClearText}>Clear All Text</button>
+                <button disabled={text.length === 0} className="btn btn-primary mx-2 my-2" onClick={handleUCClick}>Convert To Uppercase</button>
+                <button disabled={text.length === 0} className="btn btn-primary mx-2 my-2" onClick={handleLCClick}>Convert To Lowercase</button>
+                <button disabled={text.length === 0} className="btn btn-primary mx-2 my-2" onClick={handleCapitalized}>Convert To Capitalized</button>
+                <button disabled={text.length === 0} className="btn btn-primary mx-2 my-2" onClick={handleCopy}>Copy All Text</button>
+                <button disabled={text.length === 0} className="btn btn-primary mx-2 my-2" onClick={handleClearText}>Clear All Text</button>
         </div>
 
         <div className="container my-3" style={{color : props.mode === "dark"? "#EEEEEE":"black"}}>
             <h4>Your text summary is -:</h4>
-            <p>{text.split(" ").length} Words, {text.length} Characters</p>
+            <p>{text.split(" ").filter((elm)=>{return elm.length!=0}).length} Words, {text.length} Characters</p>
             <p>{0.008* text.split(" ").length} Minutes Read</p>
 
             <h2>Preview -:</h2>
