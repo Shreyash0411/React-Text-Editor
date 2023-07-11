@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Text-Editor-React/static/css/main.8e19cb6b.css",
+    "main.js": "/Text-Editor-React/static/js/main.229d6dc2.js",
+    "index.html": "/Text-Editor-React/index.html",
+    "main.8e19cb6b.css.map": "/Text-Editor-React/static/css/main.8e19cb6b.css.map",
+    "main.229d6dc2.js.map": "/Text-Editor-React/static/js/main.229d6dc2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e19cb6b.css",
+    "static/js/main.229d6dc2.js"
+  ]
+}
